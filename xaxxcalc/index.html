@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	<script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+	<script src="js/calc.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div id="container">
+		<center><img src="img/xaxx_logo.png" style="width: 50%; margin-bottom: 100px;"></center>
+		<form id="xaxxcalc">
+			<div class="form-group eigenumsatz">
+				<label for="eigenumsatz">Eingenumsatz (PW)<span>*</span></label>
+				<input type="number" class="form-control" name="eigenumsatz" access="false" id="eigenumsatz"
+					required="required" aria-required="true"> </div>
+			<div class="formbuilder-select form-group direkte-anzahl">
+				<label for="direkte-anzahl" class="formbuilder-select-label">Direkte<span>*</span></label>
+				<select class="form-control" name="direkte-anzahl" id="direkte-anzahl" required="required"
+					aria-required="true">
+					<option value="1" selected="true" id="direkte-anzahl-0">0</option>
+					<option value="2" id="direkte-anzahl-1">1</option>
+					<option value="3" id="direkte-anzahl-2">2</option>
+					<option value="4" id="direkte-anzahl-3">3</option>
+					<option value="5" id="direkte-anzahl-4">4</option>
+					<option value="6" id="direkte-anzahl-5">5</option>
+					<option value="7" id="direkte-anzahl-6">6</option>
+					<option value="8" id="direkte-anzahl-7">7</option>
+					<option value="9" id="direkte-anzahl-8">8</option>
+					<option value="10" id="direkte-anzahl-9">9</option>
+					<option value="11" id="direkte-anzahl-10">10</option>
+					<option value="12" id="direkte-anzahl-11">11</option>
+					<option value="13" id="direkte-anzahl-12">12</option>
+					<option value="14" id="direkte-anzahl-13">13</option>
+					<option value="16" id="direkte-anzahl-14">14</option>
+					<option value="17" id="direkte-anzahl-15">15</option>
+					<option value="18" id="direkte-anzahl-16">16</option>
+					<option value="19" id="direkte-anzahl-17">17</option>
+					<option value="20" id="direkte-anzahl-18">18</option>
+					<option value="21" id="direkte-anzahl-19">19</option>
+					<option value="22" id="direkte-anzahl-20">20</option>
+					<option value="23" id="direkte-anzahl-21">21</option>
+					<option value="24" id="direkte-anzahl-22">22</option>
+					<option value="25" id="direkte-anzahl-23">23</option>
+				</select>
+			</div>
+			<div id="direkte-container" class="grid-container">
+			</div>
+			<div id="firststep-results">
+				<div class="innertext">Du bist in der Stufe <span id="stufeprozent1">0</span>%</div><br>
+				<div class="innertext">Gewinn <span id="stufeprozent2">0</span>% Bonus auf Eigenumsatz: <span id="gewinnzahleigenbonus">0</span>€</div><!-- zb. ich bin 6%er und habe 500 PW Umsatz -> 5% von 500PW = Bonusgewinn -->
+				<div class="innertext">Gewinn durch Eigenumsatz durch Rabattspanne (30%): <span id="gewinnzahleigen">0</span>€</div>
+				<div class="innertext">Gewinn durch Partner: <span id="gewinnzahlpartner">0</span>€</div>
+				<hr>
+				<div class="innertext">Gewinn insgesamt: <span id="gewinnzahlgesamt">0</span>€</div><br>
+				<div class="innertext" style="font-weight: normal;"><i>Restbereich wird nicht mit einberechnet</i><br><i>Zahlen sind alle Netto</i></div>
+			</div>
+			<div style="float: right;">
+				<button type="button" style="float: right;" onclick="formCheck()">Berechnen</button><br><br>
+				<div><a href="#" onclick="clearLocalStorage()">Gespeicherte Daten löschen</a></div>
+			</div>
+		</form>
+
+
+	</div>
+</body>
+
+</html>
